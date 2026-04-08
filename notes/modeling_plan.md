@@ -37,6 +37,6 @@ The mayor's office wants to know whether certain types of 311 complaints are lik
 
 ## Next steps
 - Perform a stratified train/test split.
-- Build a preprocessing pipeline (OHE for categories, Scaling for numeric time features).
+- Build a preprocessing pipeline.
 - Fit the baseline Logistic Regression model.
-- Evaluate the model's ability to catch "slow" (0) cases using a classification report.
+- Evaluate the model
