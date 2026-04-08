@@ -35,8 +35,31 @@ The mayor's office wants to know whether certain types of 311 complaints are lik
 - **Missing Values:** `incident_zip` has 1,768 missing values. These will be handled via imputation or by dropping rows during preprocessing.
 - **Encoding:** Categorical features (agency, borough, problem_category) will require One-Hot Encoding.
 
+<<<<<<< HEAD
 ## Next steps
 - Perform a stratified train/test split.
 - Build a preprocessing pipeline.
 - Fit the baseline Logistic Regression model.
 - Evaluate the model
+=======
+
+## Baseline Model Results
+
+- **Model:** Logistic Regression
+- **Features used:** Encoded categorical and numeric features from the training set
+- **Target:** Your binary target column
+- **Train/test split:** 80/20, `random_state=42`, stratified
+
+### Metrics
+- Accuracy: 0.880
+- Precision: 0.903
+- Recall: 0.961
+
+### Interpretation
+
+The baseline model performs well overall and captures most positive cases, which is reflected in the strong recall score. Precision is also high, so when the model predicts the positive class it is usually correct. Because the classes are imbalanced, accuracy alone may make the model look stronger than it really is.
+
+### Limitation
+
+The target is imbalanced, so the model may be relying too heavily on the majority class and may not generalize well to the minority class.
+>>>>>>> 204385227312a0bc160b581c2752c8385fad5809
