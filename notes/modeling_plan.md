@@ -63,3 +63,13 @@ The baseline model performs well overall and captures most positive cases, which
 
 The target is imbalanced, so the model may be relying too heavily on the majority class and may not generalize well to the minority class.
 >>>>>>> 204385227312a0bc160b581c2752c8385fad5809
+
+## Comparison with SageMaker models
+
+- **SageMaker Notebook:** Linear Learner (Built-in Algorithm)
+- **Task Type:** Binary Classification (predicting `resolved_quickly`)
+- **Key Metrics:** - **Accuracy:** 0.848
+    - **Recall (Class 0 - Slow):** 0.10
+    - **F1-Score (Class 0 - Slow):** 0.18
+- **Comparison to sklearn:** The SageMaker Linear Learner performed slightly worse in accuracy than the baseline `sklearn` Logistic Regression (85% vs 88%) and demonstrated a severe struggle with the imbalanced nature of the data, failing to identify 90% of the "slow" resolution cases.
+- **Workflow Assessment:** The SageMaker workflow does not seem worth it for a dataset of this size (~174k records) due to the significant infrastructure overhead and provisioning wait times; however, it would be the preferred route if the project scaled to millions of rows or required integration into an automated AWS production pipeline.
