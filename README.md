@@ -1,18 +1,18 @@
 # NYC 311 Service Request Analysis Project
 
 ## Data Source and Provenance
-- Source: [NYC Open Data 311 Service Requests](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/)
-- Time period: Jan 29–Mar 21, 2026 (Q1 2026)
-- Prep: Instructor-generated random sample of 200k complaints from 15 agencies
-- Files: 
-  - raw/complaints/complaints.csv
-  - raw/agencies/agencies.csv
-- S3 paths:
-  - s3://cmse492-181211067-nyc311/raw/complaints/complaints.csv
-  - s3://cmse492-181211067-nyc311/raw/agencies/agencies.csv
+- **Source**: [NYC Open Data 311 Service Requests](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/)
+- **Time period**: Jan 29–Mar 21, 2026 (Q1 2026)
+- **Prep**: Instructor-generated random sample of 200k complaints from 15 agencies
+- **Files**: 
+  - `raw/complaints.csv` (200k rows, main requests table)
+  - `raw/agencies.csv` (unique agencies lookup table)
+- **S3 paths** (fill after upload):
+  - `s3://cmse492-huntbrendan-nyc311-767397988837-us-east-1-an/raw/complaints.csv`
+  - `s3://cmse492-huntbrendan-nyc311-767397988837-us-east-1-an/raw/agencies.csv`
 
 ## Project Structure
-
+```text
 aws-nyc311-181211067/         
 ├── README.md                 # Data source, S3 paths, assumptions
 ├── DATA_DICTIONARY.md        # Column details
@@ -20,7 +20,7 @@ aws-nyc311-181211067/
 ├── notebooks/                # Jupyter Notebooks (Load Verify, Training, SageMaker)
 ├── notes/                    # Modeling plan, Sanity checks
 └── reports/                  # Confusion matrix and analysis outputs
-
+```
 ## Data Summary
 See DATA_DICTIONARY.md for full schema.
 
