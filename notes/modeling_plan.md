@@ -6,7 +6,7 @@
 The mayor's office wants to know whether certain types of 311 complaints are likely to be resolved within 3 days — can we build a model to flag fast vs. slow resolutions at intake?
 
 ## Data source
-- **S3 path:** s3://cmse492-huntbrendan-nyc311-767397988837-us-east-1-an/modeling/modeling_data.csv
+- **S3 path:** s3://cmse492-181211067-nyc311/modeling/modeling_data.csv
 - **Records:** 173,870
 - **Athena query:** sql/athena_to_modeling.sql
 
@@ -35,19 +35,17 @@ The mayor's office wants to know whether certain types of 311 complaints are lik
 - **Missing Values:** `incident_zip` has 1,768 missing values. These will be handled via imputation or by dropping rows during preprocessing.
 - **Encoding:** Categorical features (agency, borough, problem_category) will require One-Hot Encoding.
 
-<<<<<<< HEAD
 ## Next steps
 - Perform a stratified train/test split.
 - Build a preprocessing pipeline.
 - Fit the baseline Logistic Regression model.
 - Evaluate the model
-=======
 
 ## Baseline Model Results
 
 - **Model:** Logistic Regression
 - **Features used:** Encoded categorical and numeric features from the training set
-- **Target:** Your binary target column
+- **Target:** resolved_quickly
 - **Train/test split:** 80/20, `random_state=42`, stratified
 
 ### Metrics
@@ -56,13 +54,10 @@ The mayor's office wants to know whether certain types of 311 complaints are lik
 - Recall: 0.961
 
 ### Interpretation
-
 The baseline model performs well overall and captures most positive cases, which is reflected in the strong recall score. Precision is also high, so when the model predicts the positive class it is usually correct. Because the classes are imbalanced, accuracy alone may make the model look stronger than it really is.
 
 ### Limitation
-
 The target is imbalanced, so the model may be relying too heavily on the majority class and may not generalize well to the minority class.
->>>>>>> 204385227312a0bc160b581c2752c8385fad5809
 
 ## Comparison with SageMaker models
 
