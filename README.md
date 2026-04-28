@@ -41,5 +41,4 @@ The NYC Mayor’s Office wants to identify whether certain types of 311 complain
 
 ## Assumptions and Known Issues
 * **Empty `closed_date`:** These are treated as open/unresolved requests.
-* **Class Imbalance:** The target distribution is skewed, making accuracy a misleading metric.
-* **Weather Data:** Please note that project-related weather data was sourced from Excel tabs rather than an external API.
+* **Class Imbalance:** The target distribution is skewed, making accuracy a misleading. 
