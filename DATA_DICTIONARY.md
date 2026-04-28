@@ -50,7 +50,7 @@
     - String dates: Use `DATE_PARSE(created_date, '%Y-%m-%d %H:%M:%S')` in Athena
     - `resolution_description`: Long text, some empty
 
-**S3 structure example (update this to match your actual S3 bucket structure!)**:
+**S3 structure
 
 ```
 s3://cmse492-181211067-nyc311/raw/
